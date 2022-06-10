@@ -1,46 +1,46 @@
 class Controls {
     constructor() {
-        this.fordward = false;
+        this.forward = false;
         this.left = false;
         this.right = false;
         this.reverse = false;
 
         this.#addKeyBoardListeners();
     }
+
     #addKeyBoardListeners() {
         document.onkeydown = (e) => {
             switch (e.key) {
-                case "arrowLeft":
+                case "ArrowLeft":
                     this.left = true;
                     break;
-                case "arrowRight":
+                case "ArrowRight":
                     this.right = true;
                     break;
-                case "arrowUp":
-                    this.fordward = true;
+                case "ArrowUp":
+                    this.forward = true;
                     break;
-                case "arrowDown":
+                case "ArrowDown":
                     this.reverse = true;
                     break;
             }
-            console.table(this);
         };
         document.onkeyup = (e) => {
             switch (e.key) {
-                case "arrowLeft":
+                case "ArrowLeft":
                     this.left = false;
                     break;
-                case "arrowRight":
+                case "ArrowRight":
                     this.right = false;
                     break;
-                case "arrowUp":
-                    this.fordward = false;
+                case "ArrowUp":
+                    this.forward = false;
                     break;
-                case "arrowDown":
+                case "ArrowDown":
                     this.reverse = false;
                     break;
             }
-            console.table(this);
+            // console.table(this);
         };
     }
 }

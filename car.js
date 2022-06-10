@@ -7,6 +7,20 @@ class Car {
 
         this.controls = new Controls();
     }
+    update() {
+        if (this.controls.left) {
+            this.x -= 5;
+        }
+        if (this.controls.right) {
+            this.x += 5;
+        }
+        if (this.controls.forward) {
+            this.y -= 5;
+        }
+        if (this.controls.reverse) {
+            this.y += 5;
+        }
+    }
     draw(ctx) {
         ctx.beginPath();
         ctx.rect(
@@ -15,7 +29,6 @@ class Car {
             this.width,
             this.height
         );
-        // ctx.fillStyle = "red";
         ctx.fill();
     }
 }
