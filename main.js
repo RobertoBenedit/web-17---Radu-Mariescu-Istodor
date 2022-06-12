@@ -12,4 +12,4 @@ function animate() {
     car.draw(ctx);
     requestAnimationFrame(animate);
 }
-animate()
+animate();
